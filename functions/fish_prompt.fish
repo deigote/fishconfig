@@ -4,15 +4,12 @@ end
 
 function fish_prompt
   set_color green
-  echo -n '[' 
-  echo -n (pwd | sed "s,^$HOME,~,") 
-  echo -n ']'
+  echo -n (basename (pwd | sed "s,^$HOME,~,"))
   set_color cyan
   echo -n (__git_ps1)
   if [ (_is_git_dirty) ]
     echo -n " *"
   end  
-  echo
+  echo -n ' $ '
   set_color normal
-  echo -n '$ '
 end
