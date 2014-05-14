@@ -17,6 +17,6 @@ function fish_prompt
    if [ (_is_git_dirty) ]
       echo -n " *"
    end  
-   echo -n ' $ '
+   echo
    set_color normal
 end
