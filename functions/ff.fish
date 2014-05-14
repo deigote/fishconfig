@@ -12,8 +12,6 @@ function ff
 			set other_args $argv[2..-1]
 		end
 	end
-	echo $directory
-	echo $searchterm
 	set command "find \"$directory\" -iname '*$searchterm*' ! -name '*.svn-base' $other_args"
 	echo $command
 	eval $command
