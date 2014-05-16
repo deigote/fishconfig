@@ -13,3 +13,10 @@ alias ps='ps auxw -o user,uid,pid,ppid,nice,%cpu,%mem,rss,vsize,etime,args'
 alias psg='ps | head -n 1 ; and ps | grep -i'
 alias hig='history | grep -i'
 alias grep='grep -i --color'
+
+# Modules
+for module_dir in (find $HOME/.config/fish/modules -type d -mindepth 1 -maxdepth 1) 
+	if test -d $module_dir/functions
+		set fish_function_path $fish_function_path $module_dir/functions
+	end
+end

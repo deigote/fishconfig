@@ -1,0 +1,6 @@
+[submodule "modules/fish-common"]
+	path = modules/fish-common
+	url = git@github.com:deigote/fish-common.git
+[submodule "modules/gh-issues-flow"]
+	path = modules/gh-issues-flow
+	url = git@github.com:deigote/gh-issues-flow.git
