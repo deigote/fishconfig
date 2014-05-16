@@ -10,6 +10,8 @@ function fish_prompt
          terminal-notifier -message "Shell command (commandline) is done!" -title "Command done"
       end
    end
+   set_color yellow
+   echo -n (date "+%H:%M:%S")" "
    set_color green
    echo -n (basename (pwd | sed "s,^$HOME,~,"))
    set_color cyan
