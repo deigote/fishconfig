@@ -19,4 +19,7 @@ for module_dir in (find $HOME/.config/fish/modules -type d -mindepth 1 -maxdepth
 	if test -d $module_dir/functions
 		set fish_function_path $fish_function_path $module_dir/functions
 	end
+	if test -d $module_dir/completions
+		set fish_complete_path $fish_complete_path $module_dir/completions
+	end
 end
