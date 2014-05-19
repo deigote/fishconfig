@@ -15,4 +15,4 @@ alias hig='history | grep -i'
 alias grep='grep -i --color'
 
 # Modules
-source fish-modules/add_modules_to_path.fish
+source $HOME/.config/fish/fish-modules/add_modules_to_path.fish
