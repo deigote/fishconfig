@@ -15,11 +15,4 @@ alias hig='history | grep -i'
 alias grep='grep -i --color'
 
 # Modules
-for module_dir in (find $HOME/.config/fish/modules -type d -mindepth 1 -maxdepth 1) 
-	if test -d $module_dir/functions
-		set fish_function_path $fish_function_path $module_dir/functions
-	end
-	if test -d $module_dir/completions
-		set fish_complete_path $fish_complete_path $module_dir/completions
-	end
-end
+source fish-modules/add_modules_to_path.fish
