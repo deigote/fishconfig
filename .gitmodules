@@ -4,3 +4,6 @@
 [submodule "modules/gh-issues-flow"]
 	path = modules/gh-issues-flow
 	url = git@github.com:deigote/gh-issues-flow.git
+[submodule "fish-modules"]
+	path = fish-modules
+	url = git@github.com:deigote/fish-modules.git
