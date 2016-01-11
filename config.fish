@@ -27,5 +27,10 @@ alias psg='ps | head -n 1 ; and ps | grep -i'
 alias hig='history | grep -i'
 alias grep='grep -i --color'
 
+# Non commitable stuff :)
+if test -f ~/.config/fish/as24.fish
+	source ~/.config/fish/as24.fish
+end
+
 # Modules
 source ~/.config/fish/fish-modules/add_modules_to_path.fish
