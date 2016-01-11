@@ -7,7 +7,12 @@ end
 
 # MySQL
 if test -d ~/local/mysql 
-	set -x PATH $PATH $HOME/local/mysql/bin/ $HOME/local/mysql/support-files/
+	set -x PATH $PATH ~/local/mysql/bin/ ~/local/mysql/support-files/
+end
+
+# Activator
+if test -d ~/local/activator
+	set -x PATH $PATH ~/local/activator
 end
 
 # Java and friends
@@ -23,4 +28,4 @@ alias hig='history | grep -i'
 alias grep='grep -i --color'
 
 # Modules
-source $HOME/.config/fish/fish-modules/add_modules_to_path.fish
+source ~/.config/fish/fish-modules/add_modules_to_path.fish
