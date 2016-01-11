@@ -14,9 +14,8 @@ end
 # set -x JAVA_TOOL_OPTIONS "-Dfile.encoding=UTF8 -Xmx4096m -Xms256m -XX:PermSize=256M -XX:MaxPermSize=4096M"
 # set -x JAVA_OPTS $JAVA_TOOL_OPTIONS
 # set -x GRAILS_OPTS $JAVA_TOOL_OPTIONS
-
-# Android SDK
 # set -x ANDROID_HOME /usr/local/opt/android-sdk
+set -x FREGE_HOME ~/local/frege
 
 alias ps='ps auxw -o user,uid,pid,ppid,nice,%cpu,%mem,rss,vsize,etime,args'
 alias psg='ps | head -n 1 ; and ps | grep -i'
