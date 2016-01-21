@@ -3,13 +3,18 @@ function _is_git_dirty
 end
 
 function fish_prompt
+   set -l last_cmd_status $status
+
    if set -q CMD_DURATION
-      echo \a(set_color 555555)\> Took $CMD_DURATION ms
+      echo \a(set_color 555555)\> Took $CMD_DURATION ms, returned $last_cmd_status
       set -l time_sec (echo $CMD_DURATION)
       if test $time_sec -gt 10000 ;and which terminal-notifier > /dev/null
          terminal-notifier -message "Shell command (commandline) is done!" -title "Command done"
       end
+   else
+      echo \a(set_color 555555)\> Returned $last_cmd_status
    end
+
    set git_ps (__git_ps1)
    if test ! -z "$git_ps" 
    	set_color cyan
